@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+        
+    <!-- declaro un bean musico a partir de la clase musico -->
+    <bean id="musico" class="com.tecsup.spring.model.Musico"/>
+    
+    <bean id="musico2" class="com.tecsup.spring.model.Musico">
+        <constructor-arg value="5"/>
+    </bean>
+    
+    <bean id="instrumento" class="com.tecsup.spring.model.Instrumento"/>
+        
+    <bean id="musico3" class="com.tecsup.spring.model.Musico">
+        <constructor-arg value="10"/>
+        <constructor-arg ref="instrumento"/>
+    </bean>
+        
+        
+   <bean id="musico5" class="com.tecsup.spring.model.Musico">
+        <property name="canciones" value="8" />
+   </bean>   
+   
+   
+    <bean id="musico6" class="com.tecsup.spring.model.Musico">
+        <property name="instrumento" ref="instrumento" />
+        <property name="canciones" ref="19" />
+        <property name="nombre" ref="Donald" />
+    </bean>  
+    
+      
+    <bean id="musico7" class="com.tecsup.spring.model.Musico">
+        <property name="instrumento">
+            <bean class="com.tecsup.spring.model.Guitarra"/>
+        </property> 
+    </bean>
+    
+    
+ 
+    
+        
+</beans>
