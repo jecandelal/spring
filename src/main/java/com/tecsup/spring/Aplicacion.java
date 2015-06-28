@@ -7,4 +7,8 @@ public class Aplicacion {
         
         
     }
+    
+    public static void mensaje() {
+        System.out.println("Este es el cambio");
+    }
 }
